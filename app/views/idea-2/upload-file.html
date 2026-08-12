@@ -7,7 +7,7 @@
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href: "/idea-2/home"
+    href: "/idea-2/upload-file/prepare"
   }) }}
 {% endblock %}
 
@@ -28,7 +28,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
 
-    <h1 class="govuk-heading-xl">Upload your file</h1>
+    <h1 class="govuk-heading-l">Upload your file</h1>
 
 
     {# Alternate state: file already uploaded this week #}
@@ -44,14 +44,22 @@
       </div>
     </div>
 
-    <p class="govuk-body">Before uploading your file, make sure that:</p>
+
+
+    <p class="govuk-heading-m">Before uploading your file, make sure that:</p>
     <ul class="govuk-list govuk-list--bullet">
       <li>it is in CSV format</li>
-      <li>it is named FE/DD/MM/YYYY</li>
+      <li>it is named <strong>MTD-LLLLLLLL-YYYY-WW-yyyymmdd-hhmmss.csv</strong></li>
       <li>the data is as complete as possible</li>
       <li>the data is as accurate as possible</li>
       <li>you submit your data once a week</li>
     </ul>
+
+    <div class="govuk-inset-text">
+  For the week (WW) commencing <strong>14 September 2026</strong>, use ISO week <strong>38</strong>.
+</div>
+
+<p>Check the file naming requirements on the <a href="/idea-2/upload-file/prepare">Prepare your file</a> page.</p>
 
  <div class="govuk-warning-text">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>

@@ -1,0 +1,109 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block containerStart %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/idea-2/start"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+   Prepare your file
+      </h1>
+
+      <form class="form" action="/path/of/next/page" method="post">
+
+        <p>Your file name must follow the required format before you upload it. <br><br>(Short intro explaining why they need to check the file before uploading...)</p>
+
+        <h2 class="govuk-heading-m">File name format</h2>
+
+<p class="govuk-body">
+  Name your file using this format:
+</p>
+
+<p class="govuk-body">
+  <strong>MTD-LLLLLLLL-YYYY-WW-yyyymmdd-hhmmss.csv</strong>
+</p>
+
+<p class="govuk-body">Where:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><strong>MTD</strong> identifies the file type</li>
+  <li><strong>LLLLLLLL</strong> is your 8-digit UK provider reference number or UKPRN</li>
+  <li><strong>YYYY</strong> is the calendar year, for example 2026</li>
+  <li><strong>WW</strong> is the week number the data relates to, using ISO 8601 (link to ISO week numbers table)</li>
+  <li><strong>yyyymmdd-hhmmss</strong> is the date and time the file was generated</li>
+</ul>
+
+
+<h2 class="govuk-heading-m">ISO week numbers</h2>
+
+<p class="govuk-body">
+  Use the table to find the ISO week number for the reporting week your data relates to.
+</p>
+
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Week commencing</th>
+      <th scope="col" class="govuk-table__header">Week ending</th>
+      <th scope="col" class="govuk-table__header">Year</th>
+      <th scope="col" class="govuk-table__header">ISO week</th>
+    </tr>
+  </thead>
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">31 August 2026</th>
+      <td class="govuk-table__cell">6 September 2026</td>
+      <td class="govuk-table__cell">2026</td>
+      <td class="govuk-table__cell">36</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">7 September 2026</th>
+      <td class="govuk-table__cell">13 September 2026</td>
+      <td class="govuk-table__cell">2026</td>
+      <td class="govuk-table__cell">37</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">14 September 2026</th>
+      <td class="govuk-table__cell">20 September 2026</td>
+      <td class="govuk-table__cell">2026</td>
+      <td class="govuk-table__cell">38</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<div class="govuk-inset-text">
+  <strong>Example</strong><br><br>
+  For data relating to the week commencing 14 September 2026, the ISO week number is <strong>38</strong>.<br><br>
+  If the file was generated on <strong>20 September 2026 at 3:58:05pm</strong>, the file name would be:<br><br>
+
+  <strong>MTD-10033670-2026-38-20260920-155805.csv</strong>
+</div>
+
+        {{ govukButton({
+          text: "Continue",
+          href: "/idea-2/upload-file"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

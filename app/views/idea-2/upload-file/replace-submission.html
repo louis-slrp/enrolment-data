@@ -23,12 +23,15 @@
       <form class="form" action="/path/of/next/page" method="post">
 
         <p>
-          You submitted file <b>2526_4903403590.csv</b> on 3 September 2026. Any new submission will overwrite this one.
+          You submitted file <strong>2526_4903403590.csv</strong> on 3 September 2026. Any new submission will overwrite this one.
         </p>
 
-        <p><b>
-          If you continue, this file will replace the data you previously submitted.
-        </p></b>
+        <p><strong>
+          If you continue, you will replace the data you previously submitted.
+        </p></strong>
+                <p>
+         Do you want to replace your previous submission?
+        </p>
 
         {{ govukButton({
           text: "Replace submission",
