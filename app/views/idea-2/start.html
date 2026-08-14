@@ -32,32 +32,44 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-three-quarters">
+    <div class="govuk-grid-column-full-width">
 
       <h1 class="govuk-heading-xl">
        More timely data pilot
       </h1>
 
-      <p>This service is for organisations submitting and viewing weekly enrolment data.</p>
+      <p class="govuk-body">This service is for colleges to submit and view weekly enrolment data.</p>
 
-      <p>Use this service to:</p>
+      <p class="govuk-body">Use this service to:</p>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>submit enrolment data</li>
         <li>view submitted enrolment data</li>
       </ul>
 
+       <h2 class="govuk-heading-m">Before you start</h2>
 
-       <h2 class="govuk-heading-m">
-        Before you start
-      </h2>
+       <p class="govuk-body">You must submit enrolment data every week for learners at your college who:</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>Placeholder text</li>
-          <li>Placeholder text</li>
+                
+        <li>are enrolled on at least one learning aim</li>
+        <li>are funded through 16 to 19 study programmes</li>
+
       </ul>
 
-      <p>This service is a pilot.</p>
+       <div class="govuk-inset-text">
+  For Individualised Learner Record (ILR) data, this includes learners with at least one learning aim where FundModel = 25, and CompStatus = 1.
+</div>
+
+ <p class="govuk-body"><strong>Do not include learners who have:</strong></p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>completed all learning aims</li>
+        <li>withdrawn from all learning aims</li>
+      </ul>
+
+ <p class="govuk-body"><strong>You will need to upload a CSV file containing the Unique Learner Numbers (ULNs) for eligible learners.</strong></p>
 
       {{ govukButton({
         text: "Start now",
