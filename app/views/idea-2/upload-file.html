@@ -4,11 +4,24 @@
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back",
-    href: "/idea-2/start"
+{% block containerStart %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Pilot"
+    },
+    html: 'This service is a pilot. If you have feedback about this service, email <a class="govuk-link" href="mailto:neet.feedback@education.gov.uk">neet.feedback@education.gov.uk</a>.'
   }) }}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Back",
+        href: "/idea-2/start"
+      }
+    ]
+  }) }}
+
 {% endblock %}
 
 

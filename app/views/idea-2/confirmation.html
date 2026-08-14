@@ -4,6 +4,16 @@
   Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block containerStart %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Pilot"
+    },
+    html: 'This service is a pilot. If you have feedback about this service, email <a class="govuk-link" href="mailto:neet.feedback@education.gov.uk">neet.feedback@education.gov.uk</a>.'
+  }) }}
+
+{% endblock %}
 {% block content %}
 
 <div class="govuk-grid-row">
