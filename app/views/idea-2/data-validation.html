@@ -7,7 +7,7 @@
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href: "/idea-2/upload-file"
+    href: "/idea-2/confirmation"
   }) }}
 {% endblock %}
 
@@ -15,17 +15,16 @@
 
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-full">
 
 
     <span class="govuk-caption-l">
-  Week commencing 3 September 2026
+  Week commencing 14 September 2026
 </span>
 
       <h1 class="govuk-heading-l">
-    Your upload summary
+    Your upload report
       </h1>
-
 
     {{ govukSummaryList({
       rows: [
@@ -47,7 +46,7 @@
         },
         {
           key: {
-            text: "Withdrawals"
+            text: "Withdrawals and completions"
           },
           value: {
             text: "5"
@@ -60,18 +59,30 @@
           value: {
             text: "+5"
           }
+        },
+         {
+          key: {
+            text: "Invalid ULNs"
+          },
+          value: {
+            text: "0"
+          }
+        },
+         {
+          key: {
+            text: "Unknown ULNs"
+          },
+          value: {
+            text: "0"
+          }
         }
       ]
     }) }}
 
-    {{ govukButton({
-      text: "Submit",
-      href: "/idea-2/confirmation"
+     {{ govukButton({
+      text: "Continue to reports",
+      href: "/idea-2/reports"
     }) }}
-
-    <div class="govuk-form-group">
-      <a href="/idea-2/upload-file" class="govuk-link">Upload a different file</a>
-    </div>
 
   </div>
 

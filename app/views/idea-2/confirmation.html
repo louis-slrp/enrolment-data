@@ -10,23 +10,28 @@
   <div class="govuk-grid-column-full-width">
 
     {{ govukPanel({
-      titleText: "Submission complete",
-      html: "Enrolment data submitted"
+      titleText: "File uploaded",
+      html: "Enrolment data received"
     }) }}
 
     <p class="govuk-body">We have sent you a confirmation email.</p>
 
     <h2 class="govuk-heading-m">What happens next</h2>
 
-    <p class="govuk-body">Your submission has been logged and processed at the Department for Education.</p>
+    <p class="govuk-body">We will check the data in your file against our records.</p>
 
-    <p class="govuk-body">If we need more information, we will contact you. </p>
+    <p class="govuk-body"><strong>Your report will show any data that needs your attention, including:</strong></div>
+     <ul class="govuk-list govuk-list--bullet">
+      <li>invalid ULNs</li>
+      <li>ULNs we could not match</li>
+    </ul>
 
-    <p class="govuk-body">If you have feedback about this service, email <a href="#" class="govuk-link">neet.feedback@education.gov.uk</a> </p>
-
-    <a href="/idea-2/reports" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-        View your submissions
+    <a href="/idea-2/data-validation" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+        View your report
     </a>
+
+     <p class="govuk-body">If you have feedback about this service, email <a href="#" class="govuk-link">neet.feedback@education.gov.uk</a> </p>
+
 
   </div>
 </div>
