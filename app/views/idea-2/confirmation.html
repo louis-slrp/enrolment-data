@@ -13,6 +13,16 @@
     html: 'This service is a pilot. If you have feedback about this service, email <a class="govuk-link" href="mailto:neet.feedback@education.gov.uk">neet.feedback@education.gov.uk</a>.'
   }) }}
 
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Back",
+        href: "/idea-2/upload-file"
+      }
+    ]
+  }) }}
+
 {% endblock %}
 {% block content %}
 
@@ -20,7 +30,7 @@
   <div class="govuk-grid-column-full-width">
 
     {{ govukPanel({
-      titleText: "File uploaded",
+      titleText: "File uploaded (ref: UHDWY234)",
       html: "Enrolment data received"
     }) }}
 
@@ -30,12 +40,8 @@
 
     <p class="govuk-body">We will check the data in your file against our records.</p>
 
-    <p class="govuk-body"><strong>Your report will show any data that needs your attention, including:</strong></div>
-     <ul class="govuk-list govuk-list--bullet">
-      <li>invalid ULNs</li>
-      <li>ULNs we could not match</li>
-    </ul>
-
+    <p class="govuk-body"><strong>Your report will show any invalid ULNs that need your attention.</strong></div>
+   
     <a href="/idea-2/data-validation" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
         View your report
     </a>
